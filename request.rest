@@ -1,0 +1,66 @@
+
+# UserController
+
+GET http://localhost:3000/api/v1/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ
+
+###
+GET http://localhost:3000/api/v1/user/6312b0134713e8cf1642e81a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ
+
+###
+POST http://localhost:3000/api/v1/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ
+Content-Type: application/json
+
+{
+    "username" : "Bayuguna12",
+    "email" : "putubayuguna12@gmail.com",
+    "password": "123"
+}
+
+###
+PATCH  http://localhost:3000/api/v1/user/6312b6132e99de449ca000df
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ
+
+{
+    "username" : "Bayuguna12",
+    "email" : "putubayuguna@gmail.com"
+}
+
+
+###
+DELETE   http://localhost:3000/api/v1/user/6312b6132e99de449ca000df
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ
+
+# LoginController
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username" : "Bayuguna",
+    "password" : "123"
+}
+
+# ServiceController
+###
+GET http://localhost:3000/api/v1/service
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ
+
+###
+POST http://localhost:3000/api/v1/service
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ
+
+{
+    "name" : "Service Laptop",
+    "description" : "",
+    "type" : ["elektronik", "tv", "homeservice"],
+    "is_active" : 1
+}
+
+###
+GET http://localhost:3000/api/v1/service/63147c6dca823dad0a49e191
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJheXVndW5hIiwiaWF0IjoxNjYyMTgzMzEyfQ.5wnM1B9cOHayipxITAbn1Fo8CYb_trnarEcQlP2cctQ

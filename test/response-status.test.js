@@ -5,19 +5,18 @@ const app = express();
 
 app.get('/', (req, res) => {
     if(req.query.name){
-        res.status(200);
-        res.send(`Hello ${req.query.name}`);
+        res.status(200).send(`Hello ${req.query.name}`);
     }else{
-        res.status(400);
-        res.end();
+        res.status(400).end();
     }
-});
+})
 
 test("Test Response Status", async () => {
-    let response = await request(app).get("/").query({name: "Eko"});
+    let response = await request(app).get("/").query({name: "Bayuguna"});
     expect(response.status).toBe(200);
-    expect(response.text).toBe("Hello Eko");
+    expect(response.text).toBe("Hello Bayuguna");
 
     response = await request(app).get("/");
     expect(response.status).toBe(400);
-});
+
+})

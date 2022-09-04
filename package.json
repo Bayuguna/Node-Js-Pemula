@@ -2,13 +2,14 @@
   "name": "belajar-nodejs-express",
   "version": "1.0.0",
   "description": "Belajar NodeJS Express",
-  "main": "./src/index.js",
+  "main": "./src/hello.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon server.js"
   },
   "jest": {
-    "maxConcurrency" : 2,
+    "maxConcurrency": 2,
     "verbose": true,
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
@@ -30,12 +31,18 @@
   "author": "Eko Kurniawan Khannedy",
   "license": "ISC",
   "dependencies": {
-    "winston": "^3.7.2",
-    "winston-daily-rotate-file": "^4.7.1",
-    "express": "^4.18.1",
+    "body-parser": "^1.20.0",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.4",
     "mustache-express": "^1.3.2",
-    "express-fileupload": "^1.4.0"
+    "winston": "^3.7.2",
+    "winston-daily-rotate-file": "^4.7.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.17.12",
